@@ -17,8 +17,10 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
+        System.out.println("");
         //读取配置信息
         return name+"--------"+applicationContext.getEnvironment().getProperty("name");
+
 
     }
 
