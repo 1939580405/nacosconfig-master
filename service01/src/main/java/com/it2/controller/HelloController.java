@@ -19,6 +19,7 @@ public class HelloController {
     public String hello(){
         //读取配置信息
         return name+"--------"+applicationContext.getEnvironment().getProperty("name");
+
     }
 
 
