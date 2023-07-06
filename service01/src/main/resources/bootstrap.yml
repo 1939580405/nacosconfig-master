@@ -1,0 +1,26 @@
+server:
+  port: 10001  #启动端口
+spring:
+  application:
+    name: service01
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        group: TEST_GROUP
+
+nacos:
+  discovery:
+    server-addr: 127.0.0.1:8848
+    #是否将本应用注册到nacos服务列表，默认是false
+    auto-register: true
+    register:
+      #本服务是否接受外部的请求，默认true
+      enabled: true
+      #本服务要注册到命名空间下的哪个组，默认DEFAULT_GROUP
+      group-name: DEFAULT_GROUP
+      #服务的名称，会展示在nacos服务列表，要求唯一，可以不写，默认是spring.application.name的值
+      service-name:
+
+
